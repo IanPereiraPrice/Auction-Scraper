@@ -32,6 +32,8 @@ SELECT *
 FROM temp_table
 ON CONFLICT DO NOTHING;
 
+SELECT setval('public.tag_groups_tag_group_id_seq', (SELECT MAX(group_id) FROM public.tag_groups));
+
 COMMIT;
 
 ----------------------------------------
@@ -40,7 +42,7 @@ BEGIN;
 -- Name: Card_Sales_Staging_id_seq; Type: SEQUENCE; Schema: public
 --
 
-CREATE SEQUENCE IF NOT EXISTS public."Card_Sales_Staging_id_seq"
+CREATE SEQUENCE IF NOT EXISTS public.Card_Sales_Staging_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -83,6 +85,9 @@ INSERT INTO public.card_sales_staging
 SELECT * 
 FROM temp_table
 ON CONFLICT DO NOTHING;
+
+SELECT SETVAL('public.Card_Sales_Staging_id_seq', (SELECT MAX(id) FROM public.card_sales_staging));
+
 
 COMMIT;
 
@@ -208,6 +213,7 @@ SELECT *
 FROM temp_table
 ON CONFLICT DO NOTHING;
 
+SELECT SETVAL('public.yahoo_auction_tags_id_seq', (SELECT MAX(id) FROM public.yahoo_auction_tags));
 
 COMMIT;
 
