@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: yahoo_db
+    database: yahooDB
+    schema: public
+    tables:
+      - name: card_sales_staging
+      - name: yahoo_auction_tags
+      - name: tag_groups
+      - name: japanese_translations
+      - name: yen_to_usd
+      - name: card_classification_table

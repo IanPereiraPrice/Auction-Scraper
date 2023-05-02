@@ -1,0 +1,14 @@
+# example profiles.yml file
+# https://docs.getdbt.com/docs/get-started/connection-profiles
+auction_data:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('host')}}"
+      user: "{{ env_var('user')}}"
+      password: "{{ env_var('passwd')}}"
+      port: 5432
+      dbname: "{{ env_var('db_name')}}"
+      schema: dbt_auction_transformed
+      threads: 4

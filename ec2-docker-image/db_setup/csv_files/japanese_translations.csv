@@ -1,0 +1,170 @@
+japanese,english
+レリーフ,Ultimate_Rare
+カオス・エンペラー・ドラゴン,Chaos_Emperor_Dragon
+アルティメットレア,Ultimate_Rare
+プラチナ,Platinum
+未開封,Unopened
+ジャンク,Poor
+ジャンク品,Poor
+オリカ,Fake
+新品,Mint
+青眼の白龍,Blue_Eyes_White_Dragon
+SM(?![a-zA-Z]{1}),Spell_Of_Mask
+トゥーン,Toon
+引退,Out_Of_Print
+ブラック・マジシャン・ガール,Dark_Magician_Girl
+鑑定品,Appraisal
+\d枚,Collection
+BGS9(?!\.),BGS_9
+(?<!PSA.*)完美品(?!.*PSA),Mint
+(?<=PSA.*10.*)(?<!BGS.*)完美品|完美品(?=.*PSA.*10)(?!.*BGS),PSA_10
+PSA..10,PSA_10
+純銀,Sterling_Silver
+未使用,Sealed
+やや美品,Moderately_Played
+(?<![極上完].*)(?<!PSA.*)(?<!BGS.*)美品(?!.*PSA)(?!.*BGS)|(?<!PSA.*)(?<!BGS.*)良品(?!.*PSA)(?!.*BGS),Light_Play
+中古,Played
+(?<![極上完].*)(?<!PSA.*)(?<!完.*)(?<!BGS.*)極上(?!.*PSA)(?!.*BGS)(?!.*完),Light_Play
+良好品,Moderately_Played
+キズ,Played
+"BGS9(?!.{1,2}\.)",BGS_9
+仮面の呪縛,Spell_Of_Mask
+ブルーアイズ・ホワイト・ドラゴン,Blue_Eyes_White_Dragon
+遊戯王,Yugioh
+ユーギオオー!,Yugioh
+レッドアイズ・ブラックドラゴン,Red_Eyes_Black_Dragon
+極美品,Near_Mint
+シクブル,Festa_Blue_Eyes
+PSA.10,PSA_10
+PSA10,PSA_10
+PSA.9,PSA_9
+PSA..9,PSA_9
+PSA9,PSA_9
+PSA.8,PSA_8
+PSA..8,PSA_8
+PSA8,PSA_8
+PSA.7,PSA_7
+PSA..7,PSA_7
+PSA7,PSA_7
+PSA.6,PSA_6
+PSA..6,PSA_6
+PSA6,PSA_6
+PSA.5,PSA_5
+PSA..5,PSA_5
+PSA5,PSA_5
+PSA.4,PSA_4
+PSA..4,PSA_4
+PSA4,PSA_4
+PSA.3,PSA_3
+PSA..3,PSA_3
+PSA3,PSA_3
+PSA.2,PSA_2
+PSA..2,PSA_2
+PSA2,PSA_2
+BGS.10,BGS_10
+BGS..10,BGS_10
+BGS10,BGS_10
+BGS.9\.5,BGS_9.5
+BGS..9\.5,BGS_9.5
+BGS9\.5,BGS_9.5
+目立った傷や汚れなし,Near_Mint
+やや,Moderately_Played
+まとめ売り,Collection
+初期,Initial
+海馬セット,Kaiba_Set
+周年 ,Anniversary
+ウルトラ,Ultra_Rare
+スターターBOX,Starter_Box
+スターターボックス,Starter_Box
+ウルトラレア,Ultra_Rare
+混沌帝龍-終焉の使者,Chaos_Emperor_Dragon
+ シークレット,Secret_Rare
+プロモ,Promo
+301(?![a-zA-Z]{1}),The_New_Ruler
+ 新たなる支配者,The_New_Ruler
+真紅眼の黒竜,Red_Eyes_Black_Dragon
+暗黒騎士ガイア,Gaia_The_Fierce_Knight
+PH(?![a-zA-Z]{1}),Pharaonic_Guardian
+あんこくきしガイア,Gaia_The_Fierce_Knight
+BC(?![a-zA-Z]{1}),Booster_Chronicle
+王家の守護者 ,Pharaonic_Guardian	
+MA(?![a-zA-Z]{1}),Mythological_Age
+LB(?![a-zA-Z]{1}),Legend_Of_Blue_Eyes
+蘇りし魂,Mythological_Age
+カオスソルジャー＝－開闢の使者－,Black Luster Soldier - Envoy of the Beginning
+闇を制する者,Struggle of Chaos
+SC(?![a-zA-Z]{1}),Struggle of Chaos
+悪夢の迷宮,Labyrinth of Nightmare
+LN(?![a-zA-Z]{1}),Labyrinth of Nightmare
+千眼の魔術書,Thousand Eyes Bible
+TB(?![a-zA-Z]{1}),Thousand Eyes Bible
+ユニオンの降臨,Advent of Union
+302(?![a-zA-Z]{1}),Advent of Union
+黒魔導の覇者,Champion of Black Magic
+303(?![a-zA-Z]{1}),Champion of Black Magic
+ガーディアンの力,Power of Guardian
+304(?![a-zA-Z]{1}),Power of Guardian
+闇魔界の脅威,Threat of the Dark Demon World
+305(?![a-zA-Z]{1}),Threat of the Dark Demon World
+混沌を制す者,Controller of Chaos
+306(?![a-zA-Z]{1}),Controller of Chaos
+暗黒の侵略者,Invader of Darkness
+307(?![a-zA-Z]{1}),Invader of Darkness
+天空の聖域,The Sanctuary in the Sky
+308(?![a-zA-Z]{1}),The Sanctuary in the Sky
+ファラオの遺産,Pharaohs Inheritance
+309(?![a-zA-Z]{1}),Pharaohs Inheritance
+DL1(?![a-zA-Z]{1}),DUELIST LEGACY Volume.1
+DL2(?![a-zA-Z]{1}),DUELIST LEGACY Volume.2
+DL3(?![a-zA-Z]{1}),DUELIST LEGACY Volume.3
+DL4(?![a-zA-Z]{1}),DUELIST LEGACY Volume.4
+DL5(?![a-zA-Z]{1}),DUELIST LEGACY Volume.5
+ファラオのしもべ,Pharaohs Servant
+PS(?![a-zA-Z]{1}),Pharaohs Servant
+魔法の支配者,Magic Ruler
+MR(?![a-zA-Z]{1}),Magic Ruler
+鋼鉄の襲撃者,Metal Raiders
+ME(?![a-zA-Z]{1}),Metal Raiders
+幻の召喚神,Phantom God
+PG(?![a-zA-Z]{1}),Phantom God
+暗黒魔竜復活,Revival of Black Demons Dragon
+RB(?![a-zA-Z]{1}),Revival of Black Demons Dragon
+青眼の白龍伝説,Legend_Of_Blue_Eyes
+溶岩魔神ラヴァ・ゴーレム,Lava Golem
+バイサー・ショック,Byser Shock
+ヂェミナイ・エルフ,Gemini Elf
+不死王リッチー,Fushioh Richie
+ブラック・デーモンズ・ドラゴン,B. Skull Dragon
+デーモンの召喚,Summoned Skull
+ダーク・ネクロフィア,Dark Necrofear
+仮面魔獣マスクド・ヘルレイザー,The Masked Beast
+サウザンド・アイズ・サクリファイス,Thousand-Eyes Restrict
+ＸＹ－ドラゴン・キャノン,XY Dragon Cannon
+ＸＹＺ－ドラゴン・キャノン,XYZ Dragon Cannon
+リボルバー・ドラゴン,Barrel Dragon
+超魔導剣士－ブラック・パラディ,Dark Paladin
+バスター・ブレイダー,Buster Blader
+カイザー・グライダー,Kaiser Glider
+ジェノサイドキングデーモン,Terrorking Archfiend
+暗黒魔族ギルファー・デーモン,Archfiend of Gilfer
+カオス・ソルジャー＝－開闢の使者－,Black Luster Soldier - Envoy of the Beginning
+マジシャン・オブ・ブラックカオス,Dark Magician of Black Chaos
+混沌の黒魔術師,Dark Magician of Chaos
+封印されしエクゾディア,Exodia the Forbidden One
+大天使ゼラート,Archlord Zerato
+人造人間－サイコ・ショッカー,Jinzo
+スピリッツ・オブ・ファラオ,Spirit of the Pharaoh
+竜騎士ガイア,Gaia the Dragon Champion
+黒衣の大賢者,Dark Sage
+ビッグ・シールド・ガードナー,Big Shield Gardna
+処刑人－マキュラ,Makyura The Destructor
+エクスチェンジ,Exchange
+ブレイドナイト,Blade Knight
+インセクト女王,Insect Queen
+究極完全態・グレート・モス,Perfectly Ultimate Great Moth
+ブラック・マジシャン(?!・) ,Dark Magician
+ブラックマジシャン(?!ガ) ,Dark Magician
+ブラックマジシャンガール,Dark_Magician_Girl
+カオスソルジャー(?!＝{1}),Black Luster Soldier
+カオス・ソルジャー(?!＝{1}),Black Luster Soldier
+ブラック・マジシャン,Dark Magician
