@@ -241,3 +241,10 @@ AS $function$
      OFFSET CEIL(array_upper($1, 1) / 2.0) - 1
    ) sub;
 $function$;
+
+CREATE AGGREGATE median(numeric) (
+  SFUNC=array_append,
+  STYPE=numeric[],
+  FINALFUNC=_final_median,
+  INITCOND='{}'
+);
