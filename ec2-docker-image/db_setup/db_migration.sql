@@ -14,7 +14,7 @@ CREATE SEQUENCE IF NOT EXISTS public.tag_groups_tag_group_id_seq
 --
 
 CREATE TABLE IF NOT EXISTS public.tag_groups (
-    group_id integer DEFAULT nextval('public.tag_groups_tag_group_id_seq'::regclass) NOT NULL,
+    group_id integer DEFAULT nextval('public."tag_groups_tag_group_id_seq"'::regclass) NOT NULL,
     group_name character varying NOT NULL,
     UNIQUE (group_id),
     UNIQUE (group_name)
@@ -32,7 +32,7 @@ SELECT *
 FROM temp_table
 ON CONFLICT DO NOTHING;
 
-SELECT setval('public.tag_groups_tag_group_id_seq', (SELECT MAX(group_id) FROM public.tag_groups));
+SELECT setval('public."tag_groups_tag_group_id_seq"', (SELECT MAX(group_id) FROM public.tag_groups));
 
 COMMIT;
 
@@ -86,7 +86,7 @@ SELECT *
 FROM temp_table
 ON CONFLICT DO NOTHING;
 
-SELECT SETVAL('public.Card_Sales_Staging_id_seq', (SELECT MAX(id) FROM public.card_sales_staging));
+SELECT SETVAL('public."Card_Sales_Staging_id_seq"', (SELECT MAX(id) FROM public.card_sales_staging));
 
 
 COMMIT;
@@ -150,6 +150,14 @@ COMMIT;
 
 BEGIN;
 
+
+
+CREATE SEQUENCE IF NOT EXISTS public.card_classification_table_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
 -- Name: card_classification_table; Type: TABLE; Schema: public
 --
 
@@ -157,7 +165,7 @@ CREATE TABLE IF NOT EXISTS public.card_classification_table (
     card_name text NOT NULL,
     tag_combinations text NOT NULL,
     tag_exclusions text,
-    id integer NOT NULL,
+    id integer DEFAULT nextval('public."card_classification_table_id_seq"'::regclass) NOT NULL,
     PRIMARY KEY (id),
     UNIQUE (id)
 );
@@ -173,6 +181,8 @@ INSERT INTO public.card_classification_table
 SELECT * 
 FROM temp_table
 ON CONFLICT DO NOTHING;
+
+SELECT SETVAL('public."card_classification_table_id_seq"', (SELECT MAX(id) FROM public.card_classification_table));
 
 COMMIT;
 
@@ -194,7 +204,7 @@ CREATE SEQUENCE IF NOT EXISTS public.yahoo_auction_tags_id_seq
 --
 
 CREATE TABLE IF NOT EXISTS public.yahoo_auction_tags (
-    id integer DEFAULT nextval('public.yahoo_auction_tags_id_seq'::regclass) NOT NULL,
+    id integer DEFAULT nextval('public."yahoo_auction_tags_id_seq"'::regclass) NOT NULL,
     tag character varying NOT NULL,
     group_id integer,
     PRIMARY KEY (id),
@@ -213,7 +223,7 @@ SELECT *
 FROM temp_table
 ON CONFLICT DO NOTHING;
 
-SELECT SETVAL('public.yahoo_auction_tags_id_seq', (SELECT MAX(id) FROM public.yahoo_auction_tags));
+SELECT SETVAL('public."yahoo_auction_tags_id_seq"', (SELECT MAX(id) FROM public.yahoo_auction_tags));
 
 COMMIT;
 
