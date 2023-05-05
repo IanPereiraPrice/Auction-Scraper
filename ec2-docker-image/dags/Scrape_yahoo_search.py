@@ -150,7 +150,7 @@ def crawl_spider(spider,data,bucket,key,output_folder):
     new_data = data
     def f(q):
         try:
-            runner = CrawlerRunner(settings={'FEEDS':{f's3://{bucket}{output_folder}auction-ids.json': {'format': 'json'}}
+            runner = CrawlerRunner(settings={'FEEDS':{f's3://{bucket}/{output_folder}auction-ids.json': {'format': 'json'}}
                 ,'AWS_ACCESS_KEY_ID':AWS_SERVER_PUBLIC_KEY
                 ,'AWS_SECRET_ACCESS_KEY':AWS_SERVER_SECRET_KEY})
             deferred = runner.crawl(spider, input='inputargument', dict = data)
