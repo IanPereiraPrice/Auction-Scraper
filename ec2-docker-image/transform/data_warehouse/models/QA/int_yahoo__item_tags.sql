@@ -11,30 +11,32 @@ please_work as (select max(scrape_time)::date from {{this}})
 ,
 {% endif %}
 
-item_tags as (
-  select * from {{ref('int_creating_item_tags')}}
+item_tags AS (
+  SELECT * 
+  FROM {{ref('int_mapping_tags')}}
   {% if is_incremental() %}
-    where scrape_time >= (select * from please_work)
+    WHERE scrape_time >= (SELECT * FROM please_work)
   {% endif %}
 )
-,mapped_names as (
-    select 
+,mapped_names AS (
+    SELECT 
         auction_id
         ,card_id
-    from {{ref('int_mapping_card_names')}}
+        ,card_value
+    FROM {{ref('int_mapping_card_names')}}
     {% if is_incremental() %}
-        where scrape_time >= (select * from please_work)
+        WHERE scrape_time >= (SELECT * FROM please_work)
     {% endif %}
 )
 
 
-SELECT 
+SELECT
     auction_id
     ,card_id
     ,tag_list
     ,group_list
     ,scrape_time
-FROM mapped_names
-LEFT JOIN item_tags
+    ,card_value
+FROM mapped_names AS m
+LEFT JOIN item_tags AS i
 USING (auction_id)
-

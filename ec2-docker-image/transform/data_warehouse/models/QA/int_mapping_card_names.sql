@@ -6,10 +6,10 @@
 
 WITH RECURSIVE 
 {% if is_incremental() %}
-please_work as (
-    select 
-        max(scrape_time)::date 
-        from {{this}})
+please_work AS (
+    SELECT 
+        MAX(scrape_time)::DATE
+        FROM {{this}})
 
 ,
 {% endif %}
@@ -26,7 +26,7 @@ item_class_list AS (
         ,tag_list
         ,group_list
         ,scrape_time
-    FROM {{  ref('int_creating_item_tags')  }}
+    FROM {{  ref('int_mapping_tags')  }}
     {% if is_incremental() %}
     where scrape_time >= (select * from please_work)
     {% endif %}
@@ -63,7 +63,7 @@ item_class_list AS (
                     )&&(tag_list)
                 )
                 THEN (
-                    SELECT card_Name 
+                    SELECT card_Name||','||card_value
                     FROM item_class_list
                     WHERE id = _n+1)
                 ELSE NULL
@@ -73,18 +73,28 @@ item_class_list AS (
     WHERE  _n < (SELECT MAX(id) FROM item_class_list)
     )
 
+,cte_card_values AS (
+    SELECT DISTINCT
+        auction_id
+        ,SPLIT_PART(card_id,',',1) AS card_id
+        ,SPLIT_PART(card_id,',',2)::INT AS card_value
+    FROM cte
+    WHERE _n>0)
+
 ,cte_clear_dupes AS (
     SELECT DISTINCT
         auction_id
         ,card_id
-    FROM cte
-    WHERE _n>0)
-
+        ,MAX(card_value) AS card_value
+    FROM cte_card_values
+    GROUP BY auction_id, card_id
+)
 -- join table in order to have auction_id accessible for incremental loads
 SELECT 
     auction_id
     ,card_id
     ,scrape_time
+    ,card_value
 FROM cte_clear_dupes
 LEFT JOIN item_tag_list
 USING(auction_id)

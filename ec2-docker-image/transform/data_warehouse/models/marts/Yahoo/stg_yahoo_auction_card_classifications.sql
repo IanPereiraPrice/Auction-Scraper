@@ -6,10 +6,11 @@ WITH
 card_classification_table AS (
 
     SELECT 
-        card_name
+        id
+        ,card_name
         ,tag_combinations
         ,tag_exclusions
-        ,id
+        ,card_value
     FROM {{ source('yahoo_db','card_classification_table')}}
 
 )
