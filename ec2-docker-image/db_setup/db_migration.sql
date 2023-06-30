@@ -165,8 +165,8 @@ CREATE TABLE IF NOT EXISTS public.card_classification_table (
     card_name text NOT NULL,
     tag_combinations text NOT NULL,
     tag_exclusions text,
-    card_value integer Default 100,
     id integer DEFAULT nextval('public."card_classification_table_id_seq"'::regclass) NOT NULL,
+    card_value integer Default 100,
     PRIMARY KEY (id),
     UNIQUE (id)
 );
