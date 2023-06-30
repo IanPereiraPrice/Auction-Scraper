@@ -42,7 +42,7 @@ BEGIN;
 -- Name: Card_Sales_Staging_id_seq; Type: SEQUENCE; Schema: public
 --
 
-CREATE SEQUENCE IF NOT EXISTS public.Card_Sales_Staging_id_seq
+CREATE SEQUENCE IF NOT EXISTS public.card_sales_staging_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -54,7 +54,7 @@ CREATE SEQUENCE IF NOT EXISTS public.Card_Sales_Staging_id_seq
 --
 
 CREATE TABLE IF NOT EXISTS public.card_sales_staging (
-    id integer DEFAULT nextval('public."Card_Sales_Staging_id_seq"'::regclass),
+    id integer DEFAULT nextval('public."card_sales_staging_id_seq"'::regclass),
     auction_id character varying NOT NULL,
     title character varying NOT NULL,
     price character varying,
@@ -86,7 +86,7 @@ SELECT *
 FROM temp_table
 ON CONFLICT DO NOTHING;
 
-SELECT SETVAL('public."Card_Sales_Staging_id_seq"', (SELECT MAX(id) FROM public.card_sales_staging));
+SELECT SETVAL('public."card_sales_staging_id_seq"', (SELECT MAX(id) FROM public.card_sales_staging));
 
 
 COMMIT;
